@@ -26,10 +26,9 @@ export class AppController {
   @UseGuards(LocalAuthGuard)
   @Post("login")
   login(@Request() req): any {
-    // return {
-    //   msg: "Logged in!" //ToDo: return JWT access token 
-    // };
-    return this.authService.login(req.user)
+    return {
+      msg: "Logged in!" //ToDo: return JWT access token 
+    };
   }
 
   @UseGuards(AuthenticatedGuard)
